@@ -49,17 +49,29 @@ const updateBlog = asyncHandler(async (req, res) => {
 // @desc    Delete a blog post
 // @route   DELETE /api/blogs/:id
 // @access  Admin
-
-
-// @desc    Assign blog to an editor
-// @route   PUT /api/blogs/assign/:id
-// @access  Admin
 const deleteBlog = asyncHandler(async (req, res) => {
   const blog = await Blog.findById(req.params.id);
 
   if (blog) {
     await Blog.findByIdAndDelete(req.params.id);
     res.json({ message: 'Blog removed' });
+  } else {
+    res.status(404);
+    throw new Error('Blog not found');
+  }
+});
+
+// @desc    Assign blog to an editor
+// @route   PUT /api/blogs/assign/:id
+// @access  Admin
+const assignBlog = asyncHandler(async (req, res) => {
+  const { editorId } = req.body;
+  const blog = await Blog.findById(req.params.id);
+
+  if (blog) {
+    blog.assignedTo = editorId;
+    const updatedBlog = await blog.save();
+    res.json(updatedBlog);
   } else {
     res.status(404);
     throw new Error('Blog not found');
