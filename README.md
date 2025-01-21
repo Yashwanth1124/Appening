@@ -52,7 +52,7 @@ Replace the placeholder values with your actual MongoDB connection string, JWT s
 
 To start the server, run the following command:
 
-npm start
+node server.js
 
 This will start the server on the port specified in your environment variables (default is 5000).
 
