@@ -17,6 +17,7 @@ First, clone the repository to your local machine:
 ```bash
 git clone https://github.com/Yashwanth1124/Appening.git
 cd Appening
+
 2. Install Dependencies
 Navigate to the project directory and install the required dependencies:
 
