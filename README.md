@@ -3,6 +3,13 @@
 ## Project Description
 This project is a Blog Management System with user authentication, role-based access control, and comprehensive blog management functionalities. It allows users to sign up, log in, verify their email addresses, and manage blog posts and comments based on their roles (Admin, Editor, User). 
 
+## Live URL
+This application is deployed at the following URL:
+
+https://appening-1.onrender.com
+
+You can use this URL to access and test your API endpoints.
+
 ## Setup and Installation
 
 ### 1. Clone the Repository
@@ -36,14 +43,13 @@ npm start
 This will start the server on the port specified in your environment variables (default is 5000).
 
 Using the Render Live URL
-Your application is deployed at the following URL:
+Your application is deployed at https://appening-1.onrender.com.
 
-https://appening-1.onrender.com
-You can use this URL to access your API endpoints.
+You can use this URL to access your API endpoints directly.
 
 Testing the Endpoints
 1. User Registration
-Method: POST URL: https://appening-1.onrender.com/api/auth/register Body:
+Method: POST URL: https://appening-1.onrender.com/api/auth/register Body: (Select raw and JSON (application/json))
 
 json
 {
@@ -55,7 +61,7 @@ json
 This endpoint registers a new user.
 
 2. User Login
-Method: POST URL: https://appening-1.onrender.com/api/auth/login Body:
+Method: POST URL: https://appening-1.onrender.com/api/auth/login Body: (Select raw and JSON (application/json))
 
 json
 {
@@ -69,7 +75,7 @@ Method: POST URL: https://appening-1.onrender.com/api/blogs Headers:
 
 http
 Authorization: Bearer <your-token>
-Body:
+Body: (Select raw and JSON (application/json))
 
 json
 {
@@ -86,7 +92,7 @@ Method: PUT URL: https://appening-1.onrender.com/api/blogs/<blogId> Headers:
 
 http
 Authorization: Bearer <your-token>
-Body:
+Body: (Select raw and JSON (application/json))
 
 json
 {
@@ -107,7 +113,7 @@ Method: POST URL: https://appening-1.onrender.com/api/comments/<blogId> Headers:
 
 http
 Authorization: Bearer <your-token>
-Body:
+Body: (Select raw and JSON (application/json))
 
 json
 {
@@ -122,11 +128,21 @@ http
 Authorization: Bearer <your-token>
 This endpoint deletes a comment by the user.
 
-Notes
-Replace <your-token>, <blogId>, and <commentId> with the actual values.
+Testing Instructions
+Install Postman: Download and install Postman from here.
 
-Use Postman or another API testing tool to test these endpoints.
+Create a New Request: In Postman, click the "New" button and select "Request".
 
-Ensure that you have the necessary environment variables set in your local setup.
+Set Up the Request:
 
-By following these steps, you'll be able to set up, deploy, and test your Blog Management System effectively.
+Enter the Request URL: Use the endpoints provided above.
+
+Set the HTTP Method: Select the appropriate method (GET, POST, PUT, DELETE).
+
+Add Headers: For protected endpoints, add the Authorization header with the token.
+
+Set the Body: For endpoints requiring a body, select raw and JSON (application/json) and enter the request body.
+
+Send the Request: Click "Send" and review the response.
+
+Check the Response: Ensure the responses match the expected results, including status codes and response bodies.
