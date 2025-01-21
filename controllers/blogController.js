@@ -53,13 +53,14 @@ const deleteBlog = asyncHandler(async (req, res) => {
   const blog = await Blog.findById(req.params.id);
 
   if (blog) {
-    await blog.remove();
+    await Blog.findByIdAndRemove(req.params.id);
     res.json({ message: 'Blog removed' });
   } else {
     res.status(404);
     throw new Error('Blog not found');
   }
 });
+
 
 // @desc    Assign blog to an editor
 // @route   PUT /api/blogs/assign/:id
