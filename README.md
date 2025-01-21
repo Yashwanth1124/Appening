@@ -14,25 +14,21 @@ You can use this URL to access and test your API endpoints.
 
 ### Setup and Installation
 
-1. Clone the Repository
+#### 1. Clone the Repository
    
 First, clone the repository to your local machine:
-
-``` bash
 
 git clone https://github.com/Yashwanth1124/Appening.git
 
 cd Appening
 
-2. Install Dependencies
+#### 2. Install Dependencies
 
 Navigate to the project directory and install the required dependencies:
 
-``` bash
-
 npm install
 
-3. Configure Environment Variables
+#### 3. Configure Environment Variables
 
 Create a .env file in the root directory and add the following environment variables:
 
@@ -52,17 +48,15 @@ NODE_ENV=production
 
 Replace the placeholder values with your actual MongoDB connection string, JWT secret, email service credentials, etc.
 
-4. Start the Server
+#### 4. Start the Server
 
 To start the server, run the following command:
-
-``` bash
 
 npm start
 
 This will start the server on the port specified in your environment variables (default is 5000).
 
-Using the Render Live URL
+#### Using the Render Live URL
 
 Your application is deployed at https://appening-1.onrender.com.
 
@@ -70,7 +64,7 @@ You can use this URL to access your API endpoints directly.
 
 Testing the Endpoints
 
-1. User Registration
+##### 1. User Registration
 
 Method: POST URL: https://appening-1.onrender.com/api/auth/register
 
@@ -87,7 +81,7 @@ json
 
 This endpoint registers a new user.
 
-2. User Login
+##### 2. User Login
 
 Method: POST URL: https://appening-1.onrender.com/api/auth/login
 
@@ -102,7 +96,7 @@ json
 
 This endpoint logs in the user and returns a JWT token.
 
-3. Create Blog (Admin)
+##### 3. Create Blog (Admin)
 
 Method: POST URL: https://appening-1.onrender.com/api/blogs
 
@@ -121,13 +115,13 @@ json
 
 This endpoint creates a new blog post.
 
-4. Get All Blogs
+##### 4. Get All Blogs
 
 Method: GET URL: https://appening-1.onrender.com/api/blogs
 
 This endpoint retrieves all blog posts.
 
-5. Update Blog (Editor/Admin)
+##### 5. Update Blog (Editor/Admin)
 
 Method: PUT URL: https://appening-1.onrender.com/api/blogs/<blogId>
 
@@ -146,7 +140,7 @@ json
 
 This endpoint updates an existing blog post.
 
-6. Delete Blog (Admin)
+##### 6. Delete Blog (Admin)
 
 Method: DELETE URL: https://appening-1.onrender.com/api/blogs/<blogId>
 
@@ -156,7 +150,7 @@ Authorization: Bearer <your-token>
 
 This endpoint deletes a blog post.
 
-7. Add Comment (User)
+##### 7. Add Comment (User)
 
 Method: POST URL: https://appening-1.onrender.com/api/comments/<blogId>
 
@@ -174,7 +168,7 @@ json
 
 This endpoint adds a comment to a blog post.
 
-8. Delete Comment (User)
+##### 8. Delete Comment (User)
 Method: DELETE URL: https://appening-1.onrender.com/api/comments/<commentId>
 
 Headers:
@@ -183,7 +177,7 @@ Authorization: Bearer <your-token>
 
 This endpoint deletes a comment by the user.
 
-Testing Instructions
+#### Testing Instructions
 
 Install Postman: Download and install Postman from here.
 
