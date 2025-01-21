@@ -30,13 +30,14 @@ const deleteComment = asyncHandler(async (req, res) => {
       throw new Error('User not authorized');
     }
 
-    await comment.remove();
+    await Comment.findByIdAndDelete(req.params.id);
     res.json({ message: 'Comment removed' });
   } else {
     res.status(404);
     throw new Error('Comment not found');
   }
 });
+
 
 module.exports = {
   addComment,
