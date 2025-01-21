@@ -1,23 +1,20 @@
-# Blog Management System
+Blog Management System
+Project Description
+This project is a Blog Management System with user authentication, role-based access control, and comprehensive blog management functionalities. It allows users to sign up, log in, verify their email addresses, and manage blog posts and comments based on their roles (Admin, Editor, User).
 
-## Project Description
-This project is a Blog Management System with user authentication, role-based access control, and comprehensive blog management functionalities. It allows users to sign up, log in, verify their email addresses, and manage blog posts and comments based on their roles (Admin, Editor, User). 
-
-## Live URL
-This application is deployed at the following URL:
+Live URL
+Your application is deployed at the following URL:
 
 https://appening-1.onrender.com
-
 You can use this URL to access and test your API endpoints.
 
-## Setup and Installation
-
-### 1. Clone the Repository
+Setup and Installation
+1. Clone the Repository
 First, clone the repository to your local machine:
-```bash
+
+bash
 git clone https://github.com/Yashwanth1124/Appening.git
 cd Appening
-
 2. Install Dependencies
 Navigate to the project directory and install the required dependencies:
 
@@ -26,7 +23,7 @@ npm install
 3. Configure Environment Variables
 Create a .env file in the root directory and add the following environment variables:
 
-dotenv
+plaintext
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 EMAIL_HOST=your_email_host
@@ -74,7 +71,7 @@ This endpoint logs in the user and returns a JWT token.
 3. Create Blog (Admin)
 Method: POST URL: https://appening-1.onrender.com/api/blogs Headers:
 
-http
+plaintext
 Authorization: Bearer <your-token>
 Body: (Select raw and JSON (application/json))
 
@@ -86,12 +83,14 @@ json
 This endpoint creates a new blog post.
 
 4. Get All Blogs
-Method: GET URL: https://appening-1.onrender.com/api/blogs This endpoint retrieves all blog posts.
+Method: GET URL: https://appening-1.onrender.com/api/blogs
+
+This endpoint retrieves all blog posts.
 
 5. Update Blog (Editor/Admin)
 Method: PUT URL: https://appening-1.onrender.com/api/blogs/<blogId> Headers:
 
-http
+plaintext
 Authorization: Bearer <your-token>
 Body: (Select raw and JSON (application/json))
 
@@ -105,14 +104,14 @@ This endpoint updates an existing blog post.
 6. Delete Blog (Admin)
 Method: DELETE URL: https://appening-1.onrender.com/api/blogs/<blogId> Headers:
 
-http
+plaintext
 Authorization: Bearer <your-token>
 This endpoint deletes a blog post.
 
 7. Add Comment (User)
 Method: POST URL: https://appening-1.onrender.com/api/comments/<blogId> Headers:
 
-http
+plaintext
 Authorization: Bearer <your-token>
 Body: (Select raw and JSON (application/json))
 
@@ -125,7 +124,7 @@ This endpoint adds a comment to a blog post.
 8. Delete Comment (User)
 Method: DELETE URL: https://appening-1.onrender.com/api/comments/<commentId> Headers:
 
-http
+plaintext
 Authorization: Bearer <your-token>
 This endpoint deletes a comment by the user.
 
@@ -147,3 +146,6 @@ Set the Body: For endpoints requiring a body, select raw and JSON (application/j
 Send the Request: Click "Send" and review the response.
 
 Check the Response: Ensure the responses match the expected results, including status codes and response bodies.
+
+
+
